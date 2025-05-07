@@ -56,11 +56,9 @@ export function getFakeZapServer(
     const msg = JSON.stringify({action, body});
     if (incZapEvents || msg.indexOf('localzap') === -1) {
       // Ignore localzap events
-      const output = msg
-        .replace(/\\"timestamp\\":\d+/g, 'TIMESTAMP')
-        .replace(/[\\]/g, '');
-      console.log(output);
-      actualData.push(output);
+      actualData.push(
+        msg.replace(/\\"timestamp\\":\d+/g, 'TIMESTAMP').replace(/[\\]/g, '')
+      );
     }
     res.sendStatus(200);
   });
