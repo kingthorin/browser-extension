@@ -59,7 +59,8 @@ export function getFakeZapServer(
       const output = msg
         .replace(/\\"timestamp\\":\d+/g, 'TIMESTAMP')
         .replace(/[\\]/g, '');
-      console.log('Got: ' + output);
+      const output2 = 'Got: ' + output;
+      console.log(output2);
       actualData.push(output);
     }
     res.sendStatus(200);
