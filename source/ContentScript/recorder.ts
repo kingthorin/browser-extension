@@ -65,7 +65,7 @@ class Recorder {
     if (sendCache) {
       this.handleCachedSubmit();
     }
-    // console.log('Sending statement', zestStatement);
+    console.log('Sending statement', zestStatement);
     this.notify(zestStatement);
     return Browser.runtime.sendMessage({
       type: ZEST_SCRIPT,
