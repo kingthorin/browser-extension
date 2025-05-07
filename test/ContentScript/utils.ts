@@ -57,7 +57,7 @@ export function getFakeZapServer(
     if (incZapEvents || msg.indexOf('localzap') === -1) {
       // Ignore localzap events
       console.log(
-        "Got: " + 
+        "Got: " +
         msg.replace(/\\"timestamp\\":\d+/g, 'TIMESTAMP').replace(/[\\]/g, '')
       );
       actualData.push(
